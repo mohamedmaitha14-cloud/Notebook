@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maitha's Notebook Café</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            📖 Maitha's <span>Notebook Café</span>
+        </div>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-buttons">
+
+            <button id="favoriteButton" class="header-icon">
+                ♡ <span id="favoriteCount">0</span>
+            </button>
+
+            <button id="cartButton" class="header-icon">
+                🛒 <span id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-text">
+
+            <p class="small-title">WELCOME TO YOUR HAPPY PLACE ✨</p>
+
+            <h1>
+                Cute notebooks for
+                <span>cute ideas.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover adorable notebooks made for your dreams,
+                study sessions, journaling, planning and everyday ideas.
+            </p>
+
+            <a href="#shop" class="main-button">
+                Shop Cute Notebooks 💗
+            </a>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <div class="sparkle sparkle-one">✦</div>
+            <div class="sparkle sparkle-two">♡</div>
+            <div class="sparkle sparkle-three">✧</div>
+
+            <div class="hero-notebook">
+
+                <img
+                    src="images/pink-bunny.jpg"
+                    alt="Pink Bunny Notebook">
+
+                <div class="hero-label">
+                    ♡ Today's Cute Pick ♡
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURE BAR ================= -->
+
+    <section class="features">
+
+        <div class="feature">
+            <div class="feature-icon">🎀</div>
+            <h3>Super Cute</h3>
+            <p>Designed to make you smile.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">📚</div>
+            <h3>Study Friendly</h3>
+            <p>Perfect for school and university.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">💗</div>
+            <h3>Made With Love</h3>
+            <p>Special designs for every personality.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">✨</div>
+            <h3>Gift Ready</h3>
+            <p>Perfect for your friends and family.</p>
+        </div>
+
+    </section>
+
+
+    <!-- ================= SHOP ================= -->
+
+    <section id="shop" class="shop-section">
+
+        <div class="section-title">
+
+            <p class="small-title">FIND YOUR FAVORITE</p>
+
+            <h2>Our Cute Notebook Collection 🌷</h2>
+
+            <p>
+                Choose a notebook that matches your personality.
+            </p>
+
+        </div>
+
+
+        <!-- Search -->
+
+        <div class="shop-controls">
+
+            <div class="search-box">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search notebooks...">
+
+            </div>
+
+
+            <!-- Categories -->
+
+            <div class="categories">
+
+                <button class="category active" data-category="all">
+                    All
+                </button>
+
+                <button class="category" data-category="cute">
+                    Cute
+                </button>
+
+                <button class="category" data-category="study">
+                    Study
+                </button>
+
+                <button class="category" data-category="journal">
+                    Journaling
+                </button>
+
+                <button class="category" data-category="dreamy">
+                    Dreamy
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Products -->
+
+        <div class="products-container" id="productsContainer">
+
+
+            <!-- Product 1 -->
+
+            <div
+                class="product-card"
+                data-category="cute"
+                data-name="Pink Bunny Notebook">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/pink-bunny.jpg"
+                        alt="Pink Bunny Notebook">
+
+                    <button
+                        class="favorite-btn"
+                        onclick="toggleFavorite(this, 'Pink Bunny Notebook')">
+                        ♡
+                    </button>
+
+                    <span class="product-tag">
+                        Best Seller
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Cute Collection
+                    </p>
+
+                    <h3>Pink Bunny Notebook</h3>
+
+                    <p class="product-description">
+                        A sweet pastel notebook with an adorable bunny design.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>AED 35</strong>
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart('Pink Bunny Notebook', 35)">
+                            Add to Cart 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 2 -->
+
+            <div
+                class="product-card"
+                data-category="study"
+                data-name="Study Bear Notebook">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/study-bear.jpg"
+                        alt="Study Bear Notebook">
+
+                    <button
+                        class="favorite-btn"
+                        onclick="toggleFavorite(this, 'Study Bear Notebook')">
+                        ♡
+                    </button>
+
+                    <span class="product-tag">
+                        Study Pick
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Study Collection
+                    </p>
+
+                    <h3>Study Bear Notebook</h3>
+
+                    <p class="product-description">
+                        A cozy notebook made for notes, studying and planning.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>AED 30</strong>
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart('Study Bear Notebook', 30)">
+                            Add to Cart 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 3 -->
+
+            <div
+                class="product-card"
+                data-category="journal"
+                data-name="Flower Garden Journal">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/flower-garden.jpg"
+                        alt="Flower Garden Journal">
+
+                    <button
+                        class="favorite-btn"
+                        onclick="toggleFavorite(this, 'Flower Garden Journal')">
+                        ♡
+                    </button>
+
+                    <span class="product-tag">
+                        New
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Journal Collection
+                    </p>
+
+                    <h3>Flower Garden Journal</h3>
+
+                    <p class="product-description">
+                        A beautiful floral notebook for thoughts and memories.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>AED 42</strong>
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart('Flower Garden Journal', 42)">
+                            Add to Cart 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 4 -->
+
+            <div
+                class="product-card"
+                data-category="dreamy"
+                data-name="Cloud Notes">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/cloud-notes.jpg"
+                        alt="Cloud Notes Notebook">
+
+                    <button
+                        class="favorite-btn"
+                        onclick="toggleFavorite(this, 'Cloud Notes')">
+                        ♡
+                    </button>
+
+                    <span class="product-tag">
+                        Dreamy
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Dreamy Collection
+                    </p>
+
+                    <h3>Cloud Notes</h3>
+
+                    <p class="product-description">
+                        A soft blue notebook inspired by clouds and peaceful skies.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>AED 28</strong>
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart('Cloud Notes', 28)">
+                            Add to Cart 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 5 -->
+
+            <div
+                class="product-card"
+                data-category="cute"
+                data-name="Strawberry Dreams">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/strawberry-dreams.jpg"
+                        alt="Strawberry Dreams Notebook">
+
+                    <button
+                        class="favorite-btn"
+                        onclick="toggleFavorite(this, 'Strawberry Dreams')">
+                        ♡
+                    </button>
+
+                    <span class="product-tag">
+                        Popular
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Cute Collection
+                    </p>
+
+                    <h3>Strawberry Dreams</h3>
+
+                    <p class="product-description">
+                        A fun strawberry notebook for notes, doodles and ideas.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>AED 38</strong>
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart('Strawberry Dreams', 38)">
+                            Add to Cart 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Product 6 -->
+
+            <div
+                class="product-card"
+                data-category="dreamy"
+                data-name="Moonlight Journal">
+
+                <div class="product-image">
+
+                    <img
+                        src="images/moonlight-journal.jpg"
+                        alt="Moonlight Journal">
+
+                    <button
+                        class="favorite-btn"
+                        onclick="toggleFavorite(this, 'Moonlight Journal')">
+                        ♡
+                    </button>
+
+                    <span class="product-tag">
+                        Limited
+                    </span>
+
+                </div>
+
+                <div class="product-info">
+
+                    <p class="product-category">
+                        Dreamy Collection
+                    </p>
+
+                    <h3>Moonlight Journal</h3>
+
+                    <p class="product-description">
+                        A magical journal inspired by moonlight and stars.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>AED 45</strong>
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart('Moonlight Journal', 45)">
+                            Add to Cart 🛒
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about-section">
+
+        <div class="about-image">
+
+            <div class="about-circle">
+                📖
+            </div>
+
+        </div>
+
+        <div class="about-text">
+
+            <p class="small-title">OUR LITTLE STORY 💗</p>
+
+            <h2>Where every idea gets a cute home.</h2>
+
+            <p>
+                Maitha's Notebook Café is a cute stationery shop created
+                for people who love writing, planning, studying and
+                expressing their creativity.
+            </p>
+
+            <p>
+                We believe that something as simple as a notebook can
+                make studying, journaling and everyday life more enjoyable.
+            </p>
+
+            <a href="#shop" class="main-button">
+                Explore the Collection ✨
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact-section">
+
+        <div class="section-title">
+
+            <p class="small-title">LET'S CHAT 💌</p>
+
+            <h2>Talk to Maitha</h2>
+
+            <p>
+                Have a question about a notebook? Send us a message!
+            </p>
+
+        </div>
+
+
+        <form id="contactForm" class="contact-form">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Your Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Your Message</label>
+
+                <textarea
+                    id="message"
+                    rows="5"
+                    placeholder="Write your message here..."
+                    required></textarea>
+
+            </div>
+
+
+            <button type="submit" class="send-button">
+                Send Message 💌
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            📖 Maitha's Notebook Café
+        </div>
+
+        <p>
+            Making everyday ideas a little more magical. ✨
+        </p>
+
+        <div class="socials">
+
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            <a href="#">Pinterest</a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Maitha's Notebook Café. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= CART POPUP ================= -->
+
+    <div id="cartPopup" class="popup">
+
+        <div class="popup-content">
+
+            <button
+                class="close-popup"
+                onclick="closeCart()">
+                ×
+            </button>
+
+            <h2>🛒 Your Cart</h2>
+
+            <div id="cartItems">
+                <p class="empty-cart">
+                    Your cart is empty 💗
+                </p>
+            </div>
+
+            <div class="cart-total">
+
+                <span>Total:</span>
+
+                <strong id="cartTotal">
+                    AED 0
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout-button"
+                onclick="checkout()">
+                Checkout ✨
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FAVORITES POPUP ================= -->
+
+    <div id="favoritesPopup" class="popup">
+
+        <div class="popup-content">
+
+            <button
+                class="close-popup"
+                onclick="closeFavorites()">
+                ×
+            </button>
+
+            <h2>♡ My Favorites</h2>
+
+            <div id="favoriteItems">
+
+                <p class="empty-cart">
+                    You haven't saved any notebooks yet 💗
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
